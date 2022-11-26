@@ -29,7 +29,6 @@ const App = () => {
       const response = api
         .fetchImages(query, page)
         .finally(() => setIsLoading(false));
-      console.log(response);
 
       response.then(images => {
         if (images.data.totalHits === 0) {
@@ -52,7 +51,7 @@ const App = () => {
       setError(error);
       setIsLoading(false);
     }
-  }, [query, page]);
+  }, [query, page,setError]);
   const handleSubmit = name => {
     setQuery(name);
     setPhotos([]);
