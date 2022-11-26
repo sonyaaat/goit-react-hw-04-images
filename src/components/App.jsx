@@ -29,7 +29,6 @@ const App = () => {
       const response = api
         .fetchImages(query, page)
         .finally(() => setIsLoading(false));
-      console.log(response);
 
       response.then(images => {
         if (images.data.totalHits === 0) {
