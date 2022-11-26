@@ -17,7 +17,7 @@ const App = () => {
   const [showModal, setShowModal] = useState('');
   const [largeImage, setLargeImage] = useState('');
   const [totalPages, setTotalPages] = useState(0);
-  const [error, setError] = useState('');
+  const [ setError] = useState('');
 
   useEffect(() => {
     if (query === '') {
