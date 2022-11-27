@@ -9,7 +9,7 @@ const Modal = ({ onClose, src }) => {
       }
     };
     document.addEventListener('keydown', handleModal);
-    return document.removeEventListener('keydown', handleModal);
+    return ()=> document.removeEventListener('keydown', handleModal);
   }, [onClose]);
 
   const backdropClick = evt => {
